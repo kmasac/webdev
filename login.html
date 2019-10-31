@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text], input[type=password], input[type=submit] {
+ width: 30%;
+ padding: 12px 20px;
+ margin: 8px 8px;
+ display: inline-block;
+ border: 2px solid black;
+ 
+font-size:20px;
+}
+button {
+ background-color: green;
+ color: white;
+ padding: 14px 20px;
+ margin: 8px 0;
+ border: none;
+ cursor: pointer;
+ width: 90%;
+}
+.signupbtn {
+ float: left;
+ width: 50%;
+}
+
+h2{
+font-size:40px;
+text-align:center;
+color:white;
+}
+.container {
+ padding: 16px;
+}
+form{
+margin-left:400px;
+font-size:30px;
+}
+body {
+font-size: 120%;
+ background-size: 120%;
+ background-image: url("fishfry.jpg");
+ height: 70%;
+}
+
+}
+ .signupbtn {
+ width: 50%;
+ }
+}
+.container{
+ color:white;
+ }
+</style>
+<script type="text/javascript">
+	function validateForm() 
+	{
+		var x=document.forms["myform"]["uname"].value;
+		var y=document.forms["myform"]["psw"].value;
+		uvali(x);
+		pvali(y);
+		function uvali(x)
+		{
+		if(x == "")
+		{
+			alert("the username must be filled out");
+			return false;
+
+		}
+		else if(x.length <= 6)
+		{
+			alert("The username should be 6 or more characters:");
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+	function pvali(y)
+	{
+		if(y == "")
+		{
+			alert("the password must filled out")
+		}
+	}
+
+		
+	}
+	
+</script>
+</head>
+<body>
+<a href="first.html"/>HOME</a>
+<h2>Login Form</h2>
+<form action="food.html" name="myform" onsubmit="return validateForm()" method="post">
+ <div class="container">
+ <label><b>Username: &nbsp &nbsp</b></label>
+ <input type="text" placeholder="Enter Username" name="uname" required></br>
+ <label><b>Password : &nbsp &nbsp</b></label>
+ <input type="password" placeholder="Enter Password" name="psw" required></br>
+<button align="center" type="submit" class="signupbtn" onclick="validateForm()">Login</button>
+ 
+
+ </div>
+
+</form>
+
+</body>
+</html>
++

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Full-width input fields */
+input[type=text], input[type=password] 
+{
+ width: 30%;
+ padding: 12px 20px;
+ margin: 8px 8px;
+ display: inline-block;
+ border: 2px solid black;
+ 
+font-size:20px;
+}
+.container{
+ color:white;
+ }
+/* Set a style for all buttons */
+button {
+ background-color:lime;
+ color: white;
+ padding: 14px 20px;
+ margin: 8px 0;
+ border: none;
+ cursor: pointer;
+ width: 90%;
+}
+.signupbtn {
+ float: left;
+ width: 50%;
+}
+h2{
+font-size:40px;
+text-align:center;
+color:orchid;
+}
+.container {
+ padding: 16px;
+}
+form{
+margin-left:300px;
+font-size:30px;
+}
+body {
+font-size: 120%;
+ background-size: 100%;
+ background-image: url("vadai.jpg");
+ height: 70%;
+}
+
+</style>
+<script type="text/javascript">
+	function validateForm() 
+	{
+  var x = document.forms["myForm"]["psw"].value;
+  var y= document.forms["myForm"]["pswrepeat"].value;
+   if (x != y) 
+  {
+    alert("The password and Retype password should be same!!!!");
+    return false;
+  }
+  else
+  {
+  	return true;
+  }
+  
+}
+</script>
+</head>
+
+
+<body>
+<a href="first.html"/>HOME</a>
+<h2>Signup Form</h2>
+<form name="myForm" action="success.html" onsubmit="return validateForm()" method="post">
+ <div class="container">
+ <label><b>Name&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</b></label>
+ <input type="text" placeholder="Enter Name" name="name" required></br>
+<label><b>Username &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </b></label>
+ <input type="text" placeholder="Enter Username" name="uname" required></br>
+ <label><b>Password&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </b></label>
+ <input type="password" placeholder="Enter Password" name="psw" required></br>
+<label><b>Repeat Password &nbsp</b></label>
+ <input type="password" placeholder="Repeat Password" name="pswrepeat" required></br>
+<label><b>Address&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </b></label>
+ <input type="text" placeholder="Enter Address" name="address" required></br>
+<label><b>Phone number &nbsp &nbsp &nbsp </b></label>
+ <input type="text" placeholder="Enter Phone number" name="phonenumber" required></br>
+ 
+
+ <input type="checkbox" checked="checked"> Remember me
+ <div class="clearfix">
+ <button type="submit" class="signupbtn" onclick="validateForm()">Sign Up</button>
+ </div>
+ </div>
+</form>
+</body>
+</html>
